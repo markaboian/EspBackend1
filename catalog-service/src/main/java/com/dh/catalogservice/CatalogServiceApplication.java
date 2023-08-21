@@ -7,8 +7,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 
 @SpringBootApplication
-@EnableFeignClients
 @EnableDiscoveryClient
+@EnableFeignClients
 
 public class CatalogServiceApplication {
 
