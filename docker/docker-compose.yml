@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   mysql:
-    image: arm64v8/mysql:latest
+    image: mysql:5.7
     restart: always
     environment:
       MYSQL_DATABASE: 'movie-dev'
