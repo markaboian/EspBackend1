@@ -3,7 +3,6 @@ package com.example.serieservice.service;
 import com.example.serieservice.model.Serie;
 import com.example.serieservice.repository.SerieRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 /**
