@@ -16,9 +16,9 @@ import java.util.List;
 @LoadBalancerClient(name = "serie-service", configuration = FeignConfiguration.class)
 public interface ISerieClient {
 
-    @GetMapping()
+    @GetMapping("/api/v1/series/{genre}")
     ResponseEntity<List<Serie>> getSerieByGenre(@PathVariable String genre);
 
-    @PostMapping()
-    ResponseEntity<Serie> saveSerie(@RequestBody Serie serie);
+    @PostMapping("/api/v1/series")
+    String saveSerie(@RequestBody Serie serie);
 }
