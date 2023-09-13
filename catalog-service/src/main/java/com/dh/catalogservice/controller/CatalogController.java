@@ -29,13 +29,13 @@ public class CatalogController {
         return iMovieClient.saveMovie(movie);
     }
 
-    @GetMapping()
+    @GetMapping("/catalog/serie/{genre}")
     public ResponseEntity<List<Serie>> getSerieByGenre (@PathVariable String genre) {
         return iSerieClient.getSerieByGenre(genre);
     }
 
-    @PostMapping()
-    public ResponseEntity<Serie> saveSerie (@RequestBody Serie serie) {
+    @PostMapping("/catalog/serie/save")
+    public String saveSerie (@RequestBody Serie serie) {
         return iSerieClient.saveSerie(serie);
     }
 }
