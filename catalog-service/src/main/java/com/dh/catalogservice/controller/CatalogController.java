@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -57,9 +58,9 @@ public class CatalogController {
         return iSerieClient.createSerie(serie);
     }
 
-    @GetMapping("/catalog/{genre}")
-    public Genre getAll (@PathVariable String genre) {
-        log.info("Mostrando las peliculas y series del genero " + genre);
-        return catalogService.findByGenre(genre);
+    @GetMapping("/{genre}")
+    public Genre getAllByGenre(@RequestParam(defaultValue = "false") Boolean throwError, HttpServletResponse response, @PathVariable String genre) {
+        log.info("Mostrando series y peliculas del genero " + genre);
+        return catalogService.getAllByGenre(genre, throwError);
     }
 }
