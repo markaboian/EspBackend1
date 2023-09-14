@@ -8,6 +8,7 @@ Para lo anterior deberás:
 ○ Describir la solución de dicha implementación, planteando un supuesto escenario que requiera implementar este patrón, justificándolo en un comentario o en el Readme del repositorio perteneciente al proyecto.
 
 # Justificación
+
 Entendemos que el microservicio Catalog será el más utilizado, por ello, estratégicamente lo adaptaremos para que este sea tolerante a fallos. 
 Independientemente de que hemos visto en clase Circuit breaker, las ventajas de este patrón nos aportará en Catalog lo siguiente:
 * En situaciones en las que los microservicios de películas y series (movie-service y serie-service) experimenten fallas o sobrecargas, el Circuit Breaker se activará, evitando llamadas continuas y permitiendo que el servicio catalog se recupere y continúe funcionando correctamente. 
